@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alert</fullName>
+        <default>false</default>
+        <label>Alert</label>
+    </customValue>
+    <customValue>
+        <fullName>Message</fullName>
+        <default>false</default>
+        <label>Message</label>
+    </customValue>
+    <customValue>
+        <fullName>Update</fullName>
+        <default>false</default>
+        <label>Update</label>
+    </customValue>
+    <customValue>
+        <fullName>Warning</fullName>
+        <default>false</default>
+        <label>Warning</label>
+    </customValue>
+    <masterLabel>Severity</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

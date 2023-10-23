@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Generate Object Dictionary" icon-name="standard:knowledge">
+        <div style="padding:10px;">
+            <lightning-combobox
+                name="objectName"
+                label="Select Object"
+                value={value}
+                placeholder="Select Object"
+                options={options}
+                onchange={handleChange}>
+            </lightning-combobox>
+        </div>
+        <div style="font-size:small; padding: 10px;">
+            Selected Object : {value}
+        </div>
+        <div style="padding:10px;">
+            <lightning-button variant="brand" label="Generate CSV with Object's Field Data" title="GenerateObjectFieldsData" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

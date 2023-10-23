@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resource Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resource Assignments</value>
+    </caseValues>
+    <layouts>
+        <layout>Resource Assignment Layout</layout>
+        <sections>
+            <label></label>
+            <section>Request Billing Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Request Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Weekly Schedule Details (Uncommited unti</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

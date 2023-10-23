@@ -1,0 +1,127 @@
+<template>
+    <lightning-card>
+        <div class="component">
+            <div class="row">
+                <div class="column">
+                    <p class="fromAddress"><lightning-formatted-text value="From" ></lightning-formatted-text></p>
+                    <c-reusable-lookup 
+                        label="Select From Address" 
+                        help-text="Please select email address to send email. Start typing to view auto-complete options."
+                        selected-icon-name="custom:custom23" 
+                        object-label="OrgWideEmailAddress" 
+                        object-api-name="OrgWideEmailAddress" 
+                        field-api-name="Address" 
+                        other-field-api-name="DisplayName" 
+                        onvalueselected={handleValueSelectedOnOWEAddress}
+                        onlookupdeselected={handleDeselectOnOWEAddress}>
+                    </c-reusable-lookup>
+                </div>
+                <div class="column">
+                    <p class="fromAddress"><lightning-formatted-text value="Select Template" ></lightning-formatted-text></p>
+                    <c-reusable-lookup 
+                        label="Select Email Template" 
+                        help-text="Please select email template. Start typing to view auto-complete options."
+                        selected-icon-name="standard:template" 
+                        object-label="EmailTemplate" 
+                        object-api-name="EmailTemplate" 
+                        field-api-name="Name" 
+                        other-field-api-name="Subject" 
+                        onvalueselected={handleValueSelectedOnEmailTemplate}
+                        onlookupdeselected={handleDeselectOnEmailTemplate}>
+                    </c-reusable-lookup>
+                </div>
+            </div>
+            <div class="row">
+                <p class="sendTo"><lightning-formatted-text value="Send To" ></lightning-formatted-text></p>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="Contact" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedContactRecords} 
+                        icon-name="standard:contact" 
+                        placeholder="Lookup Multiple Contacts...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="User" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedUserRecords} 
+                        icon-name="standard:user" 
+                        placeholder="Lookup Multiple Users...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+            </div>
+            <div class="row">
+                <p class="cc"><lightning-formatted-text value="Cc" ></lightning-formatted-text></p>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="Contact" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedContactRecordsCC} 
+                        icon-name="standard:contact" 
+                        placeholder="Lookup Multiple Contacts...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="User" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedUserRecordsCC} 
+                        icon-name="standard:user" 
+                        placeholder="Lookup Multiple Users...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+            </div>
+            <div class="row">
+                <p class="bcc"><lightning-formatted-text value="Bcc" ></lightning-formatted-text></p>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="Contact" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedContactRecordsBCC} 
+                        icon-name="standard:contact" 
+                        placeholder="Lookup Multiple Contacts...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+                <div class="column">
+                    <c-reusable-multi-select-lookup 
+                        objectname="User" 
+                        fieldnames=" Id, Name, Email "
+                        onselected={handleselectedUserRecordsBCC} 
+                        icon-name="standard:user" 
+                        placeholder="Lookup Multiple Users...">
+                    </c-reusable-multi-select-lookup>
+                </div>
+            </div>
+            <div class="row">
+                <lightning-input name="additionalEmails" type="text" label="Additional Emails" field-level-help="Add additional emails comma seperated" value={additionalEmails} onchange={handleChange}></lightning-input>
+            </div>
+            <div class="row">
+                <lightning-input name="emailSubject" type="text" label="Subject" value={emailSubject} required="true" onchange={handleChange}></lightning-input>
+            </div>
+            <div class="row">
+                <lightning-input-rich-text name="emailBody" label="Message" label-visible="true"  placeholder="Enter message body..." value={emailBody} onchange={handleChange}></lightning-input-rich-text>
+            </div>
+            <div class="row">
+                <div class="footerColumn">
+                    <lightning-file-upload
+                        label="Add Attachments"
+                        name="fileUploader"
+                        accept={acceptedFormats}
+                        onuploadfinished={handleUploadFinished}
+                        multiple>
+                    </lightning-file-upload>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footerColumn">
+                    <lightning-button variant="brand-outline" label="Notify" title="Notify" onclick={handleNotify}></lightning-button>
+                </div>
+                <div class="footerColumn">
+                    <lightning-button variant="brand-outline" label="Cancel/Refresh" title="Cancel/Refresh" onclick={handleRefresh}></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

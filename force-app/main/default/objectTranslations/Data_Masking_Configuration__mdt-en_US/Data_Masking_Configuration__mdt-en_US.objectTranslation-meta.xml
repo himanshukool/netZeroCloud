@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Data Masking Configuration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Data Masking Configurations</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mandate_Masking_Text_for_Custom_String</name>
+    </validationRules>
+</CustomObjectTranslation>

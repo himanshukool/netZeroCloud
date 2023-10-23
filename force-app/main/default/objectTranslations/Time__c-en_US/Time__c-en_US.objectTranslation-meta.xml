@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time</value>
+    </caseValues>
+    <layouts>
+        <layout>Account Time Reporting Layout</layout>
+        <sections>
+            <label></label>
+            <section>Billing Detail</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Time Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Time Layout</layout>
+        <sections>
+            <label></label>
+            <section>Billing Detail</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Separate time entries must be created fo</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

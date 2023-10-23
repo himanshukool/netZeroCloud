@@ -1,0 +1,42 @@
+.component {
+    padding: 2px;
+}
+
+.sendTo {
+    font-size: small;
+    font-weight: bold;
+}
+
+.cc {
+    font-size: small;
+    font-weight: bold;
+}
+
+.bcc {
+    font-size: small;
+    font-weight: bold;
+}
+
+.fromAddress {
+    font-size: small;
+    font-weight: bold;
+}
+
+.column{
+    float: left;
+    width: 33.33%;
+    margin-right: 20px;
+}
+
+.footerColumn {
+    float: left;
+    width: 30%;
+    margin-right: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 40px;
+}

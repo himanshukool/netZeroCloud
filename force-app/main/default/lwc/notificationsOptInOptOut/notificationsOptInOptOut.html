@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Create/Edit Notifications for User">
+        <div class="component">
+            <div class="row">
+                <div class="column">
+                    <c-reusable-lookup 
+                        label="Select Contact" 
+                        help-text="Please select contact to create/edit notification preferences. Start typing to view auto-complete options."
+                        selected-icon-name="standard:contact" 
+                        object-label="Contact" 
+                        object-api-name="Contact" 
+                        field-api-name="Name" 
+                        other-field-api-name="Email" 
+                        onvalueselected={handleValueSelectedOnContact}
+                        onlookupdeselected={handleDeselectOnContact}>
+                    </c-reusable-lookup>
+                </div>
+            </div>
+            <template if:true={contactId}>
+                <div class="row">
+                    <div class="column">
+                        <p>SHOW NOTIFICATIONS OPT-IN/OPT-OUT</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

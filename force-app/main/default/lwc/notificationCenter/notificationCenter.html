@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Notifications Center" icon-name="standard:custom_notification">
+        <div class="component">
+            <lightning-tabset>
+                <lightning-tab label="Create/Edit Notification Group and Members" title="Create/Edit Notification Group and Members" icon-name="standard:groups">
+                    <c-notifications-opt-in-opt-out></c-notifications-opt-in-opt-out>
+                </lightning-tab>
+                <template if:true={showServiceTab}>
+                    <lightning-tab label="Generate Service Message" title="Generate Service Message" icon-name="custom:custom53">
+                        <c-send-compose-service-message></c-send-compose-service-message>
+                    </lightning-tab>
+                </template>
+                <lightning-tab label="Set Notification Preferences" title="Set Notification Preferences" icon-name="standard:resource_preference">
+                    Two Content !
+                </lightning-tab>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>
